@@ -1,0 +1,52 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+figcaption {
+    background-color: white;
+    border-top: 0;
+    border-left: 1px solid grey;
+    border-bottom: 1px solid grey;
+    border-right: 1px solid grey;
+    margin-top: -5px;
+}
+
+figcaption { @include border-radius(4px); }
+
+.gridcontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: $prim-font;
+    padding: 5px;
+    margin-top: 0;
+}
+
+%gridcolor {
+    color: #AAAAAA;
+}
+
+.grid_one {
+    text-align: left;
+    color: #44B3D8;
+    font-size: 1.3em;
+}
+
+.grid_two {
+    @extend %gridcolor;
+    text-align: right;
+    font-size: 1.3em;
+}
+
+.grid_three {
+    text-align: left;
+    @extend %gridcolor;
+}
+
+
+.grid_four {
+    text-align: right;
+    @extend %gridcolor;
+}

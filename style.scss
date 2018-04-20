@@ -1,0 +1,68 @@
+$prim-font: Tahoma;
+
+
+.header {
+    background-color: #003680;
+    color: white;
+    line-height: 70px;
+    height: 70px;
+    margin: -8px -8px -8px -8px;
+}
+
+#logo {
+    height: 50px;
+    float: left;
+    margin-left: 50px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+
+#headline {
+    font-family: $prim-font;
+    font-size: 16pt;
+    margin: 0 auto;
+}
+
+
+.main {
+    background-color: #E3E5E6;
+    margin-left: -8px;
+}
+
+
+#wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: wrap;
+    align-items: baseline;
+}
+
+@import "navigation";
+
+
+@import "figcaption";
+
+
+#wrapper img:hover {
+    position: relative;
+    width: 200pt;
+    height: auto;
+    display: block;
+    z-index: 999;
+}
+
+footer {
+    background-color: gray;
+    color: white;
+    text-align: center;
+    height: 30px;
+    font-family: $prim-font;
+    clear: both;
+    line-height: 30px;
+    padding: 15px;
+    margin-left: -8px;
+}
+
+
+@import "mediaqueries";
